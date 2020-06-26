@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "dgSpecHash": "0YjfG7UleCu0PgfHx2E6zQSucpmljhw97CXgYqebyw/1et+PMtsCFuNV4iAAJF77ZiHthz2BUNLt1Kmbc8vbjQ==",
+  "success": false,
+  "projectFilePath": "/home/paulobchain/WEBAPI/ProjectShcool_Api/ProjectShcool_Api.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1604",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "A dependência do projeto Microsoft.AspnetCore.Razor.Desing não contém nenhum limite inferior inclusivo. Inclua um limite inferior na versão de dependência para assegurar resultados de restauração coerentes.",
+      "libraryId": "Microsoft.AspnetCore.Razor.Desing",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Não é possível encontrar o pacote Microsoft.AspnetCore.Razor.Desing. Não existe nenhum pacote com esta ID nas origens: nuget.org",
+      "libraryId": "Microsoft.AspnetCore.Razor.Desing",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}

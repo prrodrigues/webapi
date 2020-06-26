@@ -1,0 +1,67 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/paulobchain/WEBAPI/ProjectShcool_Api/ProjectShcool_Api.csproj": {}
+  },
+  "projects": {
+    "/home/paulobchain/WEBAPI/ProjectShcool_Api/ProjectShcool_Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/paulobchain/WEBAPI/ProjectShcool_Api/ProjectShcool_Api.csproj",
+        "projectName": "ProjectShcool_Api",
+        "projectPath": "/home/paulobchain/WEBAPI/ProjectShcool_Api/ProjectShcool_Api.csproj",
+        "packagesPath": "/home/paulobchain/.nuget/packages/",
+        "outputPath": "/home/paulobchain/WEBAPI/ProjectShcool_Api/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/paulobchain/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspnetCore.Razor.Desing": {
+              "target": "Package",
+              "version": "(, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.301/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
