@@ -36,7 +36,7 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "Microsoft.AspnetCore.Razor.Desing": {
+            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "(, )"
             }
