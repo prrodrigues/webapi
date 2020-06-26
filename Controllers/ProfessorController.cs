@@ -8,7 +8,7 @@ namespace ProjectShcool_Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class HomeController : ControllerBase
+    public class ProfessorController : ControllerBase
     {
         [HttpGet]
         public IActionResult Get()
