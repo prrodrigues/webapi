@@ -30,7 +30,9 @@ namespace ProjectShcool_Api
             services.AddDbContext<DataContext>(x => x.UseSqlite(
                 Configuration.GetConnectionString("DefaultConnection")
             ));
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             services.AddControllers();
+            services.AddScoped<IRepository, Repository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

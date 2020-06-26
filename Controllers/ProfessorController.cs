@@ -1,8 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ProjectShcool_Api.Data;
+using ProjectShcool_Api.Models;
 
 namespace ProjectShcool_Api.Controllers
 {
@@ -10,6 +13,12 @@ namespace ProjectShcool_Api.Controllers
     [Route("[controller]")]
     public class ProfessorController : ControllerBase
     {
+        public IRepository _repo { get; }
+        public ProfessorController(IRepository repo)
+        {
+            this._repo = repo;
+        }
+
         [HttpGet]
         public IActionResult Get()
         {
@@ -37,16 +46,23 @@ namespace ProjectShcool_Api.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post(string filt)
+        public async Task<IActionResult> Post(Professor model)
         {
             try
             {
-                return Ok((new List<String> { "a", "b", "c" }).Where(x => x == "filt"));
+                _repo.Add(model);
+
+                if (await _repo.SaveChangesAsync())
+                {
+                    return Created($"/api/aluno/{model.id}", model);
+                }
             }
             catch (Exception)
             {
                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Banco de dados falhou");
             }
+
+            return BadRequest();
         }
 
 
@@ -88,4 +104,3 @@ namespace ProjectShcool_Api.Controllers
 }
 
 
-}
