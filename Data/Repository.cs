@@ -49,9 +49,18 @@ namespace ProjectShcool_Api.Data
             return await query.ToArrayAsync();
         }
 
-        public Task<Aluno[]> GetAlunosByProfessorAsync(int ProfessorId, bool includeProf)
+        public async Task<Aluno[]> GetAlunosByProfessorAsync(int ProfessorId, bool includeProf)
         {
-            throw new System.NotImplementedException();
+            IQueryable<Aluno> query = _context.Alunos;
+
+            if (includeProf)
+            {
+                query = query.Include(p => p.professor);
+            }
+            query = query.AsNoTracking()
+                        .OrderBy(a => a.id);
+
+            return await query.ToArrayAsync();
         }
 
         public async Task<Aluno> GetAlunosById(int AlunoId, bool includeProf)
@@ -69,14 +78,33 @@ namespace ProjectShcool_Api.Data
             return await query.FirstOrDefaultAsync();
         }
 
-        public Task<Professor[]> GetProfessorAsync(bool includeAluno)
+        public async Task<Professor[]> GetProfessorAsync(bool includeAluno = false)
         {
-            throw new System.NotImplementedException();
+            IQueryable<Professor> query = _context.Professores;
+
+            if (includeAluno)
+            {
+                query = query.Include(p => p.alunos);
+            }
+            query = query.AsNoTracking()
+                        .OrderBy(a => a.id);
+
+            return await query.ToArrayAsync();
         }
 
-        public Task<Professor> GetProfessorById(int AlunoId, bool includeAluno)
+        public async Task<Professor> GetProfessorById(int professorId, bool includeAluno = false)
         {
-            throw new System.NotImplementedException();
+            IQueryable<Professor> query = _context.Professores;
+
+            if (includeAluno)
+            {
+                query = query.Include(p => p.alunos);
+            }
+            query = query.AsNoTracking()
+                        .OrderBy(a => a.id)
+                        .Where(p => p.id == professorId);
+
+            return await query.FirstOrDefaultAsync();
         }
     }
 }

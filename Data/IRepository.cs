@@ -11,10 +11,9 @@ namespace ProjectShcool_Api.Data
         Task<bool> SaveChangesAsync();
 
 
-        Task<Aluno[]> GetAlunosAsync(bool includeProf);
+        Task<Aluno[]> GetAlunosAsync(int ProfessorId, bool includeProf);
         Task<Aluno[]> GetAlunosByProfessorAsync(int ProfessorId, bool includeProf);
         Task<Aluno> GetAlunosById(int AlunoId, bool includeProf);
-
 
 
         Task<Professor[]> GetProfessorAsync(bool includeAluno);

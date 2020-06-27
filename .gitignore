@@ -50,3 +50,6 @@ obj/Debug/netcoreapp3.1/ProjectShcool_Api.csproj.FileListAbsolute.txt
 obj/Debug/netcoreapp3.1/ProjectShcool_Api.csprojAssemblyReference.cache
 obj/Debug/netcoreapp3.1/ProjectShcool_Api.dll
 obj/Debug/netcoreapp3.1/ProjectShcool_Api.pdb
+Migrations/20200626030451_init.cs
+Migrations/20200626030451_init.Designer.cs
+Migrations/DataContextModelSnapshot.cs
